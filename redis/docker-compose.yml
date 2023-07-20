@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - ./cache:/data
+    environment:
+      - REDIS_REPLICATION_MODE=master
+      - REDIS_PASSWORD=admin
+    networks:
+      - internal
+  redis-exporter:
+    image: oliver006/redis_exporter
+    ports:
+      - 9121:9121
+    env_file:
+      - .env
+    networks:
+      - internal
+    
+networks:
+  internal:
+    external: true
