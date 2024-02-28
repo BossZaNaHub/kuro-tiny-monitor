@@ -2,7 +2,7 @@ version: '2'
 
 services:
   nginx:
-    image: nginx:latest
+    # image: nginx:latest
     container_name: nginx-service-1
     build:
       context: .
