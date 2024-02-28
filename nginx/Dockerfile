@@ -1,6 +1,10 @@
 FROM nginx:latest
 
-COPY ./out /var/www/out
+USER www-data
+
+WORKDIR /var/www/out
+
+COPY ./out .
 # Set permissions for the directory
 RUN chown -R www-data:www-data /var/www/out
 RUN chmod -R 755 /var/www/out
