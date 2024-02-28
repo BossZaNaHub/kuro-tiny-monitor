@@ -3,7 +3,7 @@ version: '2'
 services:
   nginx:
     image: nginx:latest
-    container_name: nginx-service
+    container_name: nginx-service-1
     ports:
       - "80:80"
     volumes:
@@ -11,6 +11,7 @@ services:
       - ./html:/usr/share/nginx/html
     networks:
       - internal
+    user: "www-data:www-data"
 
 networks:
   internal:
