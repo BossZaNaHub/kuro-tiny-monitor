@@ -14,7 +14,7 @@ services:
       - ./html:/usr/share/nginx/html
     networks:
       - internal
-    user: "www-data:www-data"
+    # user: "www-data:www-data"
 
 networks:
   internal:
