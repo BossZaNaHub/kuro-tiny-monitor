@@ -4,6 +4,7 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx
+    hostname: nginx
     ports:
       - "80:80"
     volumes:

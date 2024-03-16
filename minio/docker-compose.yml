@@ -1,12 +1,13 @@
 # Copyright VMware, Inc.
 # SPDX-License-Identifier: APACHE-2.0
 
-version: '2'
+version: '3'
 
 services:
   minio:
     image: docker.io/bitnami/minio:latest
     container_name: minio
+    hostname: minio
     ports:
       - '9000:9000'
       - '9001:9001'
