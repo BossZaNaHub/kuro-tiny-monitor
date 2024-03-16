@@ -4,18 +4,15 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx-service
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./default.conf:/etc/sites-available
+      - ./default.conf:/etc/sites-available/default.conf
       - ./out:/var/www/out
     networks:
       - internal
-    # user: "www-data:www-data"
 
 networks:
   internal:
