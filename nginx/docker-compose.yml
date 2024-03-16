@@ -8,8 +8,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./default.conf:/etc/sites-available/default.conf
+      - ./default.conf:/etc/nginx/conf.d/default.conf
       - ./out:/var/www/out
     networks:
       - internal
