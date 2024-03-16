@@ -6,7 +6,7 @@ version: '2'
 services:
   minio:
     image: docker.io/bitnami/minio:latest
-    container_name: minio.service
+    container_name: minio_service
     ports:
       - '9000:9000'
       - '9001:9001'
