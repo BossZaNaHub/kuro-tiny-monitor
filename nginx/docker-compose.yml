@@ -11,6 +11,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./default.conf:/etc/sites-available
       - ./out:/var/www/out
     networks:
       - internal
