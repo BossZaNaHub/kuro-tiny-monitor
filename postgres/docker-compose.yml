@@ -13,14 +13,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=kuroshibaz
-  postgres-exporter:
-    image: prometheuscommunity/postgres-exporter
-    ports:
-      - 9187:9187
-    env_file:
-      - .env
-    networks:
-      - internal
+  # postgres-exporter:
+  #   image: prometheuscommunity/postgres-exporter
+  #   ports:
+  #     - 9187:9187
+  #   env_file:
+  #     - .env
+  #   networks:
+  #     - internal
         
 volumes:
   data:

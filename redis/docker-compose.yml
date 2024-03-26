@@ -12,14 +12,14 @@ services:
       - REDIS_PASSWORD=admin
     networks:
       - internal
-  redis-exporter:
-    image: oliver006/redis_exporter
-    ports:
-      - 9121:9121
-    env_file:
-      - .env
-    networks:
-      - internal
+  # redis-exporter:
+  #   image: oliver006/redis_exporter
+  #   ports:
+  #     - 9121:9121
+  #   env_file:
+  #     - .env
+  #   networks:
+  #     - internal
     
 networks:
   internal:
