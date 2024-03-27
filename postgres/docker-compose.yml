@@ -10,8 +10,8 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=kuroshibaz
+      - POSTGRES_PASSWORD=IlbAWbCJTPsBszE
       - POSTGRES_DB=kuroshibaz
   # postgres-exporter:
   #   image: prometheuscommunity/postgres-exporter
