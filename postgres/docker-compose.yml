@@ -9,10 +9,12 @@ services:
       - internal
     volumes:
       - ./data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_USER=kuroshibaz
-      - POSTGRES_PASSWORD=IlbAWbCJTPsBszE
-      - POSTGRES_DB=kuroshibaz
+    env_file:
+      - .env
+    # environment:
+      # - POSTGRES_USER=kuroshibaz
+      # - POSTGRES_PASSWORD=IlbAWbCJTPsBszE
+      # - POSTGRES_DB=kuroshibaz
   # postgres-exporter:
   #   image: prometheuscommunity/postgres-exporter
   #   ports:

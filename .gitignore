@@ -1,1 +1,3 @@
 minio/minio_data/*
+postgres/data/
+postgres/.env
