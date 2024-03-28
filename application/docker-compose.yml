@@ -3,14 +3,12 @@ version: '3.8'
 services:
   api:
     image: alpine:latest
+    build:
+      context: .
     ports:
       - 3100:3100
-    volumes:
-      - ./kz_api-linux-x64:/app
-      - ./config:/app/config
     networks:
       - internal
-    command: ["/app/kz_api-linux-x64", "serve"]
 
 networks:
   internal:
